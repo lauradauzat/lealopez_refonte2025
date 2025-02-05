@@ -75,3 +75,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.testimonial-track');
+    // ... remove all carousel related code
+});

@@ -1994,43 +1994,169 @@ section h2::after {
 
 /* Hero Section */
 .hero-section {
-    position: relative;
-    margin-bottom: 4rem;
-    text-align: center;
+    padding: 4rem 0;
 }
 
-.hero-section h1 {
-    color: var(--blue-munsell);
-    font-size: 2.8rem;
-    margin-bottom: 2rem;
-    position: relative;
-    display: inline-block;
+.hero-profile {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
 }
 
-.hero-section h1::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background: var(--mountbatten-pink);
-    border-radius: 2px;
-}
-
-.hero-image {
-    width: 100%;
-    height: 400px;
-    border-radius: 20px;
+.profile-image {
+    flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.hero-image img {
+.profile-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    color: var(--blue-munsell);
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text h2 {
+    color: var(--gunmetal);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    color: var(--mountbatten-pink);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.cta-buttons button {
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+#inline-button {
+    background: var(--blue-munsell);
+    color: white;
+    border: none;
+}
+
+#inline-button:hover {
+    background: var(--gunmetal);
+    transform: translateY(-2px);
+}
+
+.secondary-cta button {
+    background: var(--ghost-white);
+    color: var(--blue-munsell);
+    border: 2px solid var(--blue-munsell);
+}
+
+.secondary-cta button:hover {
+    background: var(--blue-munsell);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Trust Badges */
+.trust-badges {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.badge-icon i {
+    font-size: 2rem;
+    color: var(--blue-munsell);
+}
+
+.badge-content h3 {
+    color: var(--gunmetal);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.badge-content p {
+    color: var(--mountbatten-pink);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-profile {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .profile-image {
+        margin: 0 auto;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+
+    .trust-badges {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .trust-badges {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .profile-image {
+        width: 250px;
+        height: 250px;
+    }
 }
 
 /* Content Sections */
@@ -3050,6 +3176,249 @@ section h2::after {
 
     .hero-content h2 {
         font-size: 1.8rem;
+    }
+}
+
+/* Help Section Styles */
+.help-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.help-section h2 {
+    color: var(--blue-munsell);
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.help-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.help-card-link {
+    text-decoration: none;
+}
+
+.help-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.help-card:hover {
+    transform: translateY(-5px);
+}
+
+.help-card i {
+    font-size: 2.5rem;
+    color: var(--blue-munsell);
+    margin-bottom: 1.5rem;
+}
+
+.help-card h3 {
+    color: var(--gunmetal);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.help-card p {
+    color: var(--mountbatten-pink);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.help-section-footer {
+    margin-top: 2rem;
+}
+
+.help-section-link {
+    text-decoration: none;
+}
+
+.help-section-link button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+.help-section-link button i {
+    transition: transform 0.3s ease;
+}
+
+.help-section-link:hover button i {
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .help-section {
+        padding: 3rem 0;
+    }
+
+    .help-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .help-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .help-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.testimonials h2 {
+    color: var(--blue-munsell);
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+/* Remove the carousel styles */
+.testimonial-container,
+.testimonial-track,
+.nav-button {
+    display: none;
+}
+
+/* Keep the original testimonials grid styles */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    text-align: left;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    height: 300px; /* Fixed height for uniformity */
+    overflow: hidden;
+}
+
+.testimonial-card.expanded {
+    height: auto;
+    z-index: 10;
+}
+
+.testimonial-card:not(.expanded):not(.no-overflow)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, white);
+    pointer-events: none;
+}
+
+.testimonial-card p {
+    color: var(--gunmetal);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    position: relative;
+}
+
+.testimonial-card:not(.expanded):not(.no-overflow) p {
+    overflow: hidden;
+}
+
+.testimonial-card.no-overflow {
+    cursor: default;
+    height: auto;
+}
+
+.testimonial-card:hover:not(.no-overflow) {
+    transform: translateY(-5px);
+}
+
+.testimonial-card .stars {
+    color: #FFD700;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card .author {
+    color: var(--blue-munsell);
+    font-weight: 600;
+    display: block;
+}
+
+.google-reviews-link {
+    margin-top: 3rem;
+}
+
+.google-reviews-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: white;
+    border-radius: 30px;
+    color: var(--gunmetal);
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.google-reviews-link a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+.google-reviews-link i.fab {
+    color: #4285F4;
+    font-size: 1.5rem;
+}
+
+.google-reviews-link .rating {
+    display: inline-flex;
+    gap: 0.2rem;
+    margin-left: 1rem;
+}
+
+.google-reviews-link .rating i {
+    color: #FFD700;
+}
+
+@media (max-width: 768px) {
+    .testimonials {
+        padding: 3rem 0;
+    }
+
+    .testimonials h2 {
+        font-size: 1.8rem;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem;
     }
 }
 
