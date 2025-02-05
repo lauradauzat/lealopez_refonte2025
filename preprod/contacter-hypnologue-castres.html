@@ -38,68 +38,114 @@
     <div id="header"></div>
     
     <main class="container">
-        <section class="contact-section">
-            <h1>Tarifs & Contact</h1>
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <h1>Prendre rendez-vous</h1>
+            <p class="subtitle">Je vous accompagne dans votre démarche de changement à Castres et ses environs</p>
+        </section>
 
-            <div class="pricing-card">
-                <h2>Les Tarifs</h2>
-                <div class="pricing-table">
-                    <div class="pricing-row">
-                        <span>Coaching d'excellence (2 heures)</span>
-                        <span>130€</span>
-                    </div>
-                    <div class="pricing-row">
-                        <span>Accompagnement hypnose enfant, adolescent</span>
-                        <span>50€</span>
-                    </div>
-                    <div class="pricing-row">
-                        <span>Accompagnement hypnose et coaching adulte</span>
-                        <span>70€</span>
-                    </div>
-                    <div class="pricing-row">
-                        <span>Accompagnement hypnose personnel soignant, secours, gardien de la paix et militaire</span>
-                        <span>50€</span>
-                    </div>
-                    <div class="pricing-row">
-                        <span>Tarif étudiant et sans emploi (sur présentation d'un justificatif)</span>
-                        <span>50€</span>
-                    </div>
-                </div>
-                <p class="payment-info">Moyen de paiement : chèque bancaire, virement, espèces</p>
-            </div>
-
-            <div class="contact-card">
-                <h2>Contact</h2>
-                <p class="contact-intro">
-                    Afin de répondre au mieux à vos demandes, indiquez vos nom et prénom, votre âge et expliquez en quelques lignes vos besoins,
-                    demandes et/ou difficultés. Je vous répondrai dans un délai de 48h.
-                </p>
-
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:lealopez.hypno@gmail.com" class="contact-link">lealopez.hypno@gmail.com</a>
-                    </div>
+        <div class="contact-grid">
+            <!-- Left Column: Contact Info -->
+            <section class="contact-info-section">
+                <div class="contact-card primary">
+                    <h2>Me contacter</h2>
+                    <p class="contact-intro">Pour toute demande de rendez-vous ou d'information, n'hésitez pas à me contacter :</p>
                     
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <p>6 rue victor Hugo<br>CASTRES, 81100<br>FRANCE</p>
-                            <a href="https://www.google.com/maps/place/La+Station+C/@43.5943316,2.2302017,17z" target="_blank" class="map-link">
-                                Voir sur Google Maps <i class="fas fa-external-link-alt"></i>
-                            </a>
+                    <div class="contact-methods">
+                        <a href="tel:+33749269589" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3>Téléphone</h3>
+                                <p>+33 7 49 26 95 89</p>
+                            </div>
+                        </a>
+
+                        <a href="mailto:lealopez.hypno@gmail.com" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3>Email</h3>
+                                <p>lealopez.hypno@gmail.com</p>
+                            </div>
+                        </a>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3>Cabinet</h3>
+                                <p>6 rue Victor Hugo<br>81100 CASTRES</p>
+                                <a href="https://www.google.com/maps/place/La+Station+C/@43.5943316,2.2302017,17z" 
+                                   target="_blank" 
+                                   class="map-link">
+                                   Voir sur Google Maps <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <p>+33 7 49 26 95 89</p>
+                    <div class="contact-note">
+                        <i class="fas fa-info-circle"></i>
+                        <p>Pour une meilleure prise en charge, merci d'indiquer vos nom, prénom, âge et d'expliquer brièvement vos besoins ou difficultés.</p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <!-- Right Column: Pricing -->
+            <section class="pricing-section">
+                <div class="pricing-card">
+                    <h2>Tarifs des séances</h2>
+                    
+                    <div class="pricing-item featured">
+                        <div class="pricing-header">
+                            <h3>Coaching d'excellence</h3>
+                            <span class="price">130€</span>
+                        </div>
+                        <p class="session-detail">Séance intensive de 2 heures</p>
+                    </div>
+
+                    <div class="pricing-item">
+                        <div class="pricing-header">
+                            <h3>Accompagnement adulte</h3>
+                            <span class="price">70€</span>
+                        </div>
+                        <p class="session-detail">Hypnose et coaching</p>
+                    </div>
+
+                    <div class="pricing-item">
+                        <div class="pricing-header">
+                            <h3>Accompagnement jeune</h3>
+                            <span class="price">50€</span>
+                        </div>
+                        <p class="session-detail">Enfant et adolescent</p>
+                    </div>
+
+                    <div class="pricing-group">
+                        <h3>Tarifs spéciaux - 50€</h3>
+                        <ul>
+                            <li>Personnel soignant</li>
+                            <li>Personnel de secours</li>
+                            <li>Gardien de la paix</li>
+                            <li>Militaire</li>
+                            <li>Étudiant (sur justificatif)</li>
+                            <li>Personne sans emploi (sur justificatif)</li>
+                        </ul>
+                    </div>
+
+                    <div class="payment-info">
+                        <i class="fas fa-credit-card"></i>
+                        <p>Moyens de paiement acceptés : chèque bancaire, virement, espèces</p>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
     <div id="footer"></div>
     
+    <script src="https://kit.fontawesome.com/44a9982843.js" crossorigin="anonymous"></script>
 </body>
 </html>
